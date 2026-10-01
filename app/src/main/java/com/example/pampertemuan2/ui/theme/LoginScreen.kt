@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -35,17 +34,23 @@ import com.example.pampertemuan2.R
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {
     Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(Color(0xFFEFEFEF)),
+        modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
+        // Background Image login_bg.png
+        Image(
+            painter = painterResource(id = R.drawable.login_bg),
+            contentDescription = "Login Background",
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
+
         Card(
             modifier = Modifier
                 .fillMaxWidth(0.88f)
                 .fillMaxHeight(0.92f),
             shape = RoundedCornerShape(24.dp),
-            colors = CardDefaults.cardColors(containerColor = Color.White),
+            colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.92f)),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
         ) {
             Column(
@@ -69,7 +74,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Image 1 (Logo UMY) & Image 2 (Logo Kotlin)
+                // Image 1 (Logo UMY)
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center,
@@ -84,29 +89,19 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                             .background(Color.White),
                         contentScale = ContentScale.Fit
                     )
-                    Spacer(modifier = Modifier.width(16.dp))
-                    Image(
-                        painter = painterResource(id = R.drawable.kotlin_logo),
-                        contentDescription = "Logo Kotlin",
-                        modifier = Modifier
-                            .size(70.dp)
-                            .clip(CircleShape)
-                            .background(Color.White),
-                        contentScale = ContentScale.Fit
-                    )
                 }
 
                 Spacer(modifier = Modifier.height(12.dp))
 
                 // User details
                 Text(
-                    text = "Nama",
+                    text = "Ilham Fadhilah",
                     fontSize = 13.sp,
                     color = Color.Gray,
                     fontWeight = FontWeight.Medium
                 )
                 Text(
-                    text = "Pascal Pahlavi Pasa",
+                    text = "Teknologi Informasi",
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF3F51B5)
@@ -120,7 +115,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Image 3 (Free/Background scene image in circle)
+                // Image 3 (Kotlin logo / Free image in circle)
                 Box(
                     modifier = Modifier
                         .size(160.dp)
@@ -129,7 +124,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.notasibalok),
+                        painter = painterResource(id = R.drawable.kotlin_logo),
                         contentDescription = "Background Scene",
                         modifier = Modifier.fillMaxSize(),
                         contentScale = ContentScale.Crop
