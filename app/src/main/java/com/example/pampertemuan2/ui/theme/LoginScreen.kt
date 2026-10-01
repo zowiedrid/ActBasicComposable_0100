@@ -68,6 +68,6 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun LoginScreenPreview() {
+fun LoginScreenDarkPreview() {
     Pampertemuan2Theme { LoginScreen() }
 }
