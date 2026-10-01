@@ -49,13 +49,13 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(text = "Login", fontSize = 27.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
-            Text(text = "Ini adalah halaman login,", fontSize = 12.sp, color = Color.Gray)
+            Text(text = "Ini adalah halaman login,", fontSize = 12.sp, color = Color.DarkGray)
             Spacer(modifier = Modifier.height(12.dp))
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.umy_logo), contentDescription = "Logo UMY", modifier = Modifier.size(70.dp).clip(CircleShape).background(Color.White), contentScale = ContentScale.Fit)
             }
             Spacer(modifier = Modifier.height(12.dp))
-            Text(text = "Ilham Fadhilah", fontSize = 13.sp, color = Color.Gray, fontWeight = FontWeight.Medium)
+            Text(text = "Ilham Fadhilah", fontSize = 13.sp, color = Color.DarkGray, fontWeight = FontWeight.Medium)
             Text(text = "Teknologi Informasi", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
             Text(text = "20200140100", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Black)
             Spacer(modifier = Modifier.height(16.dp))
