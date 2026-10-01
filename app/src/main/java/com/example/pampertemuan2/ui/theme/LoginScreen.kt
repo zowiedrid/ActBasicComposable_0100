@@ -57,7 +57,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "Name: Ilham Fadhilah", fontSize = 13.sp, color = Color.DarkGray, fontWeight = FontWeight.Medium)
             Text(text = "Program Studi: Teknologi Informasi", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
-            Text(text = "20200140100", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Black)
+            Text(text = "NIM: 20200140100", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Black)
             Spacer(modifier = Modifier.height(16.dp))
             Box(modifier = Modifier.size(160.dp).clip(CircleShape).background(Color.LightGray), contentAlignment = Alignment.Center) {
                 Image(painter = painterResource(id = R.drawable.kotlin_logo), contentDescription = "Kotlin Logo", modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
