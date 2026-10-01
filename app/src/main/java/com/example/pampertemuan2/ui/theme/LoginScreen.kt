@@ -2,8 +2,10 @@ package com.example.pampertemuan2.ui.theme
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
@@ -39,8 +42,8 @@ fun LoginScreen(modifier: Modifier = Modifier) {
     ) {
         Card(
             modifier = Modifier
-                .fillMaxWidth(0.85f)
-                .fillMaxHeight(0.88f),
+                .fillMaxWidth(0.88f)
+                .fillMaxHeight(0.92f),
             shape = RoundedCornerShape(24.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
@@ -48,13 +51,13 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(24.dp),
+                    .padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 // Title & Subtitle
                 Text(
                     text = "Login",
-                    fontSize = 28.sp,
+                    fontSize = 26.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF3F51B5)
                 )
@@ -64,47 +67,63 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                     color = Color.Gray
                 )
 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(12.dp))
 
-                // Top Logo / Emblem (Circular)
-                Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_foreground),
-                    contentDescription = "Logo",
-                    modifier = Modifier
-                        .size(90.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF8BC34A)),
-                    contentScale = ContentScale.Crop
-                )
+                // Image 1 (Logo UMY) & Image 2 (Logo Kotlin)
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.umy_logo),
+                        contentDescription = "Logo UMY",
+                        modifier = Modifier
+                            .size(70.dp)
+                            .clip(CircleShape)
+                            .background(Color.White),
+                        contentScale = ContentScale.Fit
+                    )
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Image(
+                        painter = painterResource(id = R.drawable.kotlin_logo),
+                        contentDescription = "Logo Kotlin",
+                        modifier = Modifier
+                            .size(70.dp)
+                            .clip(CircleShape)
+                            .background(Color.White),
+                        contentScale = ContentScale.Fit
+                    )
+                }
 
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(12.dp))
 
                 // User details
                 Text(
                     text = "Nama",
-                    fontSize = 14.sp,
+                    fontSize = 13.sp,
                     color = Color.Gray,
                     fontWeight = FontWeight.Medium
                 )
                 Text(
                     text = "Pascal Pahlavi Pasa",
-                    fontSize = 16.sp,
+                    fontSize = 15.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF3F51B5)
                 )
                 Text(
                     text = "20200140100",
-                    fontSize = 16.sp,
+                    fontSize = 15.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
                 )
 
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-                // Bottom Circular Image
+                // Image 3 (Free/Background scene image in circle)
                 Box(
                     modifier = Modifier
-                        .size(190.dp)
+                        .size(160.dp)
                         .clip(CircleShape)
                         .background(Color.LightGray),
                     contentAlignment = Alignment.Center
