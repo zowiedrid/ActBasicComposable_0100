@@ -48,7 +48,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                 .padding(20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "Login", fontSize = 26.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
+            Text(text = "Login", fontSize = 27.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
             Text(text = "Ini adalah halaman login,", fontSize = 12.sp, color = Color.Gray)
             Spacer(modifier = Modifier.height(12.dp))
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
