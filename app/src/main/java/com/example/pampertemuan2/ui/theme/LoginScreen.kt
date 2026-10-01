@@ -71,3 +71,5 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 fun LoginScreenDarkPreview() {
     Pampertemuan2Theme { LoginScreen() }
 }
+
+// Final polish for LoginScreen (NIM: 20200140100)
