@@ -48,16 +48,16 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                 .padding(20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "Login", fontSize = 27.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
-            Text(text = "Ini adalah halaman login,", fontSize = 12.sp, color = Color.DarkGray)
+            Text(text = "Login", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.White)
+            Text(text = "Ini adalah halaman login,", fontSize = 16.sp, color = Color.White)
             Spacer(modifier = Modifier.height(12.dp))
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.umy_logo), contentDescription = "Logo UMY", modifier = Modifier.size(72.dp).clip(CircleShape).background(Color.White), contentScale = ContentScale.Fit)
             }
             Spacer(modifier = Modifier.height(12.dp))
-            Text(text = "Name: Ilham Fadhilah", fontSize = 13.sp, color = Color.DarkGray, fontWeight = FontWeight.Medium)
-            Text(text = "Program Studi: Teknologi Informasi", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
-            Text(text = "NIM: 20200140100", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Black)
+            Text(text = "Name: Ilham Fadhilah", fontSize = 16.sp, color = Color.White, fontWeight = FontWeight.Medium)
+            Text(text = "Program Studi: Teknologi Informasi", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.White)
+            Text(text = "NIM: 20200140100", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = Color.White)
             Spacer(modifier = Modifier.height(16.dp))
             Box(modifier = Modifier.size(165.dp).clip(CircleShape).background(Color.LightGray), contentAlignment = Alignment.Center) {
                 Image(painter = painterResource(id = R.drawable.kotlin_logo), contentDescription = "Kotlin Logo", modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
