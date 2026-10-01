@@ -27,97 +27,40 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pampertemuan2.R
 
+/**
+ * Login screen implementation for Activity 2.
+ */
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        // Background Image login_bg.png
         Image(
             painter = painterResource(id = R.drawable.login_bg),
             contentDescription = "Login Background",
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-
-        // Direct content inside Box (no Card)
         Column(
             modifier = Modifier
                 .fillMaxWidth(0.88f)
                 .padding(20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Title & Subtitle
-            Text(
-                text = "Login",
-                fontSize = 26.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color(0xFF3F51B5)
-            )
-            Text(
-                text = "Ini adalah halaman login,",
-                fontSize = 12.sp,
-                color = Color.Gray
-            )
-
+            Text(text = "Login", fontSize = 26.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
+            Text(text = "Ini adalah halaman login,", fontSize = 12.sp, color = Color.Gray)
             Spacer(modifier = Modifier.height(12.dp))
-
-            // Image 1 (Logo UMY)
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.umy_logo),
-                    contentDescription = "Logo UMY",
-                    modifier = Modifier
-                        .size(70.dp)
-                        .clip(CircleShape)
-                        .background(Color.White),
-                    contentScale = ContentScale.Fit
-                )
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+                Image(painter = painterResource(id = R.drawable.umy_logo), contentDescription = "Logo UMY", modifier = Modifier.size(70.dp).clip(CircleShape).background(Color.White), contentScale = ContentScale.Fit)
             }
-
             Spacer(modifier = Modifier.height(12.dp))
-
-            // User details
-            Text(
-                text = "Ilham Fadhilah",
-                fontSize = 13.sp,
-                color = Color.Gray,
-                fontWeight = FontWeight.Medium
-            )
-            Text(
-                text = "Teknologi Informasi",
-                fontSize = 15.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color(0xFF3F51B5)
-            )
-            Text(
-                text = "20200140100",
-                fontSize = 15.sp,
-                fontWeight = FontWeight.Bold,
-                color = Color.Black
-            )
-
+            Text(text = "Ilham Fadhilah", fontSize = 13.sp, color = Color.Gray, fontWeight = FontWeight.Medium)
+            Text(text = "Teknologi Informasi", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3F51B5))
+            Text(text = "20200140100", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = Color.Black)
             Spacer(modifier = Modifier.height(16.dp))
-
-            // Image 3 (Kotlin logo in circle)
-            Box(
-                modifier = Modifier
-                    .size(160.dp)
-                    .clip(CircleShape)
-                    .background(Color.LightGray),
-                contentAlignment = Alignment.Center
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.kotlin_logo),
-                    contentDescription = "Background Scene",
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
+            Box(modifier = Modifier.size(160.dp).clip(CircleShape).background(Color.LightGray), contentAlignment = Alignment.Center) {
+                Image(painter = painterResource(id = R.drawable.kotlin_logo), contentDescription = "Kotlin Logo", modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
             }
         }
     }
@@ -126,7 +69,5 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun LoginScreenPreview() {
-    Pampertemuan2Theme {
-        LoginScreen()
-    }
+    Pampertemuan2Theme { LoginScreen() }
 }
